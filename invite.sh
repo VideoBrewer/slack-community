@@ -22,12 +22,14 @@ usage:
 "
 token=""
 
+# TODO: Split while to extract token from any order of flags
 while getopts 'ht:e:f:' flag; do
   case "${flag}" in
     h) 
       usage
       ;;
     t)
+      # TODO: Error if missing token
       token="${OPTARG}"
       ;;
     e) 
